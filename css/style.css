@@ -46,11 +46,11 @@ body{
 }
 svg{
 	fill: currentcolor;
-	width: 15px;
-	height: 15px;
+	width: 35px;
+	height: 35px;
 }
 img.svg{
-	width: 15px;
+	width: 35px;
 	height: 15px;
 }
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
@@ -848,7 +848,7 @@ h6 { font-size: 16px; }
 	border: 6px solid #fff;
 }
 .fatma_chandoul_tm_about .center{
-	width: 44%;
+	width: 74%;
 	padding: 0px 100px 0px 140px;
 }
 .fatma_chandoul_tm_about .center .title{
@@ -1080,7 +1080,7 @@ h6 { font-size: 16px; }
 	float: left;
 }
 .help{
-	margin-top: -500px;
+	margin-top: -230px;
 	padding-top: 100px;
 }
 .fatma_chandoul_tm_portfolio .portfolio_filter{
@@ -1104,7 +1104,7 @@ h6 { font-size: 16px; }
 }
 .fatma_chandoul_tm_portfolio .portfolio_filter ul li a{
 	text-decoration: none;
-	color: #fff;
+	color: #EE82EE;
 	font-weight: 700;
 	font-family: "Josefin Sans";
 	
@@ -1119,6 +1119,7 @@ h6 { font-size: 16px; }
 	height: auto;
 	clear: both;
 	float: left;
+	margin-top:4%;
 }
 .fatma_chandoul_tm_portfolio .portfolio_list ul{
 	margin: 0px 0px 0px -25px;
@@ -1139,6 +1140,7 @@ h6 { font-size: 16px; }
 }
 .fatma_chandoul_tm_portfolio .portfolio_list ul li .list_inner .image{
 	position: relative;
+	height:300px;
 }
 .fatma_chandoul_tm_portfolio .portfolio_list ul li .list_inner .image img{
 	position: relative;
@@ -1703,7 +1705,7 @@ h6 { font-size: 16px; }
 	padding-top: 160px;
 }
 .fatma_chandoul_tm_resume .content_inner{
-	width: 75%;
+	width: 100%;
 	margin-top: 85px;
 	float: left;
 }

@@ -1005,11 +1005,12 @@ h6 { font-size: 16px; }
 	margin-top: 32px;
 }
 .fatma_chandoul_tm_skills .right{
-	width: 50%;
+	width: 25%;
 	padding-left: 63px;
 	position: relative;
 	top: -8px;
 }
+
 .dodo_progress{
 	width: 100%;
 	height: auto;

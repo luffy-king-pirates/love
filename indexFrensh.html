@@ -844,13 +844,7 @@
               </div>
               <div class="right wow fadeInRight" data-wow-duration="1s">
                 <div class="fields">
-                  <form
-                    action="https://marketifythemes.net/"
-                    method="post"
-                    class="contact_form"
-                    id="contact_form"
-                    autocomplete="off"
-                  >
+                 
                     <div
                       class="returnmessage"
                       data-success="Your message has been received, We will contact you soon."
@@ -889,14 +883,16 @@
                         placeholder="Your message here"
                       ></textarea>
                     </div>
-                    <div class="fatma_chandoul_tm_button">
+                    <div class="fatma_chandoul_tm_button"
+                    onclick="submitForm()"
+                    >
                       <a id="send_message" href="#"
                         ><span
                           >Soumettre un message
                           <img class="svg" src="img/svg/send.svg" alt /></span
                       ></a>
                     </div>
-                  </form>
+                
                 </div>
               </div>
             </div>
@@ -969,7 +965,23 @@
       <div class="mouse-cursor cursor-outer"></div>
       <div class="mouse-cursor cursor-inner"></div>
     </div>
+    <script>
+      function submitForm() {
+        // Your form submission logic here
 
+        // Trigger Google Analytics event
+        gtag("event", "form_submission", {
+          event_category: "Contact Form",
+          event_label: `Name : ${document.getElementById("name").value}
+          Email : ${document.getElementById("email").value}
+          Phone :  ${document.getElementById("phone").value}
+          Message : ${document.getElementById("message").value}
+
+          Date : ${new Date().toISOString()}
+          `,
+        });
+      }
+    </script>
     <script
       data-cfasync="false"
       src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"

@@ -95,7 +95,6 @@
                 <li><a href="#resume">Resume</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li><a href="indexFrensh.html">Fr</a></li>
-
               </ul>
             </div>
           </div>
@@ -797,6 +796,20 @@
           </div>
         </div>
       </div>
+      <div class="toast">
+        <div class="toast-content">
+          <i class="fas fa-solid fa-check check"></i>
+
+          <div class="message">
+            <span class="text text-1">Success</span>
+            <span class="text text-2">Your changes has been saved</span>
+          </div>
+        </div>
+        <i class="fa-solid fa-xmark close"></i>
+
+        <!-- Remove 'active' class, this is just to show in Codepen thumbnail -->
+        <div class="progress active"></div>
+      </div>
 
       <div class="fatma_chandoul_tm_section" id="contact">
         <div class="fatma_chandoul_tm_contact">
@@ -843,59 +856,47 @@
               </div>
               <div class="right wow fadeInRight" data-wow-duration="1s">
                 <div class="fields">
-                  <form
-                    action="https://marketifythemes.net/"
-                    method="post"
-                    class="contact_form"
-                    id="contact_form"
-                    autocomplete="off"
-                  >
-                    <div
-                      class="returnmessage"
-                      data-success="Your message has been received, We will contact you soon."
-                    ></div>
-                    <div class="empty_notice">
-                      <span>Please Fill Required Fields</span>
-                    </div>
-                    <div class="input_list">
-                      <ul>
-                        <li>
-                          <input
-                            id="name"
-                            type="text"
-                            placeholder="Your Name"
-                          />
-                        </li>
-                        <li>
-                          <input
-                            id="email"
-                            type="text"
-                            placeholder="Your Email"
-                          />
-                        </li>
-                        <li>
-                          <input
-                            id="phone"
-                            type="number"
-                            placeholder="Your Phone"
-                          />
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="message_area">
-                      <textarea
-                        id="message"
-                        placeholder="Your message here"
-                      ></textarea>
-                    </div>
-                    <div class="fatma_chandoul_tm_button">
-                      <a id="send_message" href="#"
-                        ><span
-                          >Submit Message
-                          <img class="svg" src="img/svg/send.svg" alt /></span
-                      ></a>
-                    </div>
-                  </form>
+                  <div
+                    class="returnmessage"
+                    data-success="Your message has been received, We will contact you soon."
+                  ></div>
+                  <div class="empty_notice">
+                    <span>Please Fill Required Fields</span>
+                  </div>
+                  <div class="input_list">
+                    <ul>
+                      <li>
+                        <input id="name" type="text" placeholder="Your Name" />
+                      </li>
+                      <li>
+                        <input
+                          id="email"
+                          type="text"
+                          placeholder="Your Email"
+                        />
+                      </li>
+                      <li>
+                        <input
+                          id="phone"
+                          type="number"
+                          placeholder="Your Phone"
+                        />
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="message_area">
+                    <textarea
+                      id="message"
+                      placeholder="Your message here"
+                    ></textarea>
+                  </div>
+                  <div class="fatma_chandoul_tm_button" onclick="submitForm()">
+                    <a id="send_message"
+                      ><span
+                        >Submit Message
+                        <img class="svg" src="img/svg/send.svg" alt /></span
+                    ></a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -968,7 +969,20 @@
       <div class="mouse-cursor cursor-outer"></div>
       <div class="mouse-cursor cursor-inner"></div>
     </div>
+    <script>
+      function submitForm() {
+        gtag("event", "form_submission", {
+          event_category: "Contact Form",
+          event_label: `Name : ${document.getElementById("name").value}
+                      Email : ${document.getElementById("email").value}
+                      Phone :  ${document.getElementById("phone").value}
+                      Message : ${document.getElementById("message").value}
 
+                      Date : ${new Date().toISOString()}
+                      `,
+        });
+      }
+    </script>
     <script
       data-cfasync="false"
       src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
